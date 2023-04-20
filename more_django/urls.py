@@ -22,4 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('set/',views.set),
     path('get/',views.get),
+    path('send/',views.send_email),
 ]

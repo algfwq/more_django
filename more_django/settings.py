@@ -47,6 +47,19 @@ CACHES = {
     }
 }
 
+#发送邮件配置
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = True  # 是否使用TLS安全传输协议(用于在两个通信应用程序之间提供保密性和数据完整性。)
+EMAIL_USE_SSL = False  # 是否使用SSL加密，qq企业邮箱要求使用
+EMAIL_HOST = 'smtp.office365.com'
+# EMAIL_HOST = "smtp-mail.outlook.com"
+EMAIL_PORT = 587  # 发件箱的SMTP服务器端口
+EMAIL_HOST_USER = 'algpythontest@outlook.com'  # 发送邮件的邮箱地址
+EMAIL_HOST_PASSWORD = 'ss699610'  #smtp.office365.com邮箱可以直接使用密码
+EMAIL_FROM = 'algpythontest@outlook.com' #必须与EMAIL_HOST_USER相同
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER  #使用smtp.office365.com邮件服务器时，必须设置DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
+
 # Application definition
 
 INSTALLED_APPS = [
