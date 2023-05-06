@@ -22,5 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('set/',views.set),
     path('get/',views.get),
+    path("clear/",views.clear),
+    path('delete/',views.delete),
     path('send/',views.send_email),
 ]

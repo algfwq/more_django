@@ -11,6 +11,14 @@ def set(request):
 def get(request):
     return HttpResponse(cache.get('message'))
 
+def clear(request):
+    cache.clear()
+    return HttpResponse('缓存已清空')
+
+def delete(request):
+    cache.delete('message')
+    return HttpResponse('缓存已被清除')
+
 def send_email(request):
     mail.send_mail(
         subject='Windows10对你妈妈的问候！',  # 题目
